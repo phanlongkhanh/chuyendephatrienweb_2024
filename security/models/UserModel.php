@@ -37,11 +37,19 @@ class UserModel extends BaseModel {
      * @param $id
      * @return mixed
      */
-    public function deleteUserById($id) {
-        $sql = 'DELETE FROM users WHERE id = '.$id;
-        return $this->delete($sql);
 
+
+    public function deleteUserById($id,$user) {
+       // Kiểm tra xem ID của người dùng có khớp với ID hiện tại không
+    if ($id !== $user) {
+        return "Xóa không thành công";
     }
+    
+    // Nếu ID khớp, thực hiện truy vấn xóa
+    $sql = 'DELETE FROM users WHERE id = '.$id;
+    return $this->delete($sql);
+    }
+
 
     /**
      * Update user
@@ -49,11 +57,22 @@ class UserModel extends BaseModel {
      * @return mixed
      */
     public function updateUser($input) {
+        if (empty($input['name']) || !preg_match('/^[A-Za-z0-9]{5,15}$/', $input['name'])) {
+            return 'Tên người dùng không hợp lệ. Nó phải từ 5 đến 15 ký tự và chỉ chứa A-Z, a-z, 0-9.';
+        }
+    
+        if (empty($input['password']) || 
+            !preg_match('/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[~!@#$%^&*()]).{5,10}$/', $input['password'])) {
+            return 'Mật khẩu không hợp lệ. Nó phải từ 5 đến 10 ký tự, bao gồm chữ thường, chữ HOA, số và ký tự đặc biệt.';
+        }
+        $name = mysqli_real_escape_string(self::$_connection, $input['name']);
+        $password = password_hash($input['password'], PASSWORD_BCRYPT);
+    
         $sql = 'UPDATE users SET 
-                 name = "' . mysqli_real_escape_string(self::$_connection, $input['name']) .'", 
-                 password="'. md5($input['password']) .'"
-                WHERE id = ' . $input['id'];
-
+                 name = "' . $name . '", 
+                 password = "' . $password . '" 
+                WHERE id = ' . (int)$input['id']; 
+    
         $user = $this->update($sql);
 
         return $user;
