@@ -39,15 +39,10 @@ class UserModel extends BaseModel {
      */
 
 
-    public function deleteUserById($id,$user) {
-       // Kiểm tra xem ID của người dùng có khớp với ID hiện tại không
-    if ($id !== $user) {
-        return "Xóa không thành công";
-    }
-    
-    // Nếu ID khớp, thực hiện truy vấn xóa
-    $sql = 'DELETE FROM users WHERE id = '.$id;
-    return $this->delete($sql);
+     public function deleteUserById($id) {
+        $sql = 'DELETE FROM users WHERE id = '.$id;
+        return $this->delete($sql);
+
     }
 
 

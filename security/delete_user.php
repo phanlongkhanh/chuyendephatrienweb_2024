@@ -7,7 +7,14 @@ $id = NULL;
 
 if (!empty($_GET['id'])) {
     $id = $_GET['id'];
-    $userModel->deleteUserById($id);//Delete existing user
+    $user = $userModel->findUserById($id);
+
+    if ($user) {
+        $userModel->deleteUserById($id);
+    } else {
+        echo "Bạn Không tìm thấy ID cần xóa";
+        exit();
+    }
 }
 header('location: list_users.php');
 ?>
