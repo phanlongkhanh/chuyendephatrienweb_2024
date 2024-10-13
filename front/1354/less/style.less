@@ -1,0 +1,36 @@
+@border-color: #050000;
+@bg-color: #850909;
+@text-color: #c91010;
+@shadow-color: rgba(0, 0, 0, 0.1);
+@border-radius: 5%;
+@image-border-radius: 4px;
+
+
+.product-item {
+    width: 200px;
+    border: 2px solid @border-color; // Viền cho item
+    padding: 10px;
+    text-align: center;
+    background-color: @bg-color;
+    border-radius: @border-radius; // Bo tròn góc của viền
+    box-shadow: 0 4px 8px @shadow-color; // Đổ bóng cho viền
+
+    .product-image {
+        width: 100%; // Hình ảnh chiếm 100% chiều rộng của item
+        height: auto; // Giữ tỉ lệ hình ảnh
+        border-radius: @image-border-radius; // Bo tròn nhẹ góc của hình ảnh
+    }
+
+    .product-name {
+        margin-top: 10px;
+        font-size: 18px;
+        color: @text-color; // Màu chữ của tên sản phẩm
+    }
+}
+
+.khung{
+     width: 100px;
+     height: 100px;
+     border: 2px solid @border-color;
+     border-radius: @border-radius;
+}
