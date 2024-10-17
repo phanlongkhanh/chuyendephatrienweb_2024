@@ -1,0 +1,158 @@
+.type-3033 .Nav {
+  height: 50px;
+  width: 100%;
+  border: .2px solid black;
+  display: flex;
+  align-items: center;
+}
+.type-3033 .Nav .homepage {
+  margin-left: 100px;
+  margin-right: 20px;
+}
+.type-3033 .content-box {
+  margin-left: 100px;
+  margin-top: 20px;
+}
+.type-3033 .content-box .accord-btn {
+  width: 500px;
+  height: 50px;
+}
+.type-3033 .content-box .accordion {
+  width: 500px;
+}
+.type-3033 .content-box .khungdep {
+  display: flex;
+}
+.type-3033 .content-box .muiten {
+  padding-left: 150px;
+  margin-top: 0;
+}
+.type-3033 .content-box .accordion-block {
+  margin-bottom: 10px;
+}
+.type-3033 .content-box .accord-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.5s ease, padding 0.5s ease;
+  padding: 0 10px;
+}
+.type-3033 .content-box input[type="checkbox"] {
+  display: none;
+}
+.type-3033 .content-box input[type="checkbox"]:checked~.accord-content {
+  max-height: 200px;
+  padding: 10px;
+}
+.type-3033 .content-box input[type="checkbox"]:checked~.accord-btn {
+  background-color: #3be6ef;
+  color: #f9f4f4;
+}
+.type-3033 .content-box input[type="checkbox"]:checked~.accord-btn .chu {
+  background-color: #3be6ef;
+  color: #f9f4f4;
+}
+.type-3033 .content-box .chu {
+  color: #3d3d3d;
+  font-weight: 700;
+  transition: all 500ms ease;
+  text-transform: none;
+}
+.type-3033 .content-box .content-text {
+  color: #9a9a9a;
+  line-height: 26px;
+  margin: 0;
+}
+.type-3033 .content-box .accord-btn {
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ccc;
+  transition: background-color 0.3s ease;
+}
+.type-3033 .content-box .trucxoay {
+  position: relative;
+}
+.type-3033 .content-box .muiten {
+  text-align: center;
+  position: absolute;
+}
+.type-3033 .content-box input[type="checkbox"]:checked+.accord-btn .trucxoay {
+  transform: rotate(90deg);
+  top: -170px;
+  left: 160px;
+}
+.type-3033 .Ask {
+  background-color: rgba(195,189,189,0.462);
+  top: -20px;
+  margin-top: 20px;
+}
+.type-3033 .Ask .text {
+  margin-top: 30px;
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: medium none;
+  display: block;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  width: 100%;
+  transition: all 500ms ease;
+  border: 1px solid #e2e2e2;
+}
+.type-3033 .Ask .email {
+  margin-top: 30px;
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: medium none;
+  display: block;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  width: 100%;
+  transition: all 500ms ease;
+  border: 1px solid #e2e2e2;
+}
+.type-3033 .Ask .subject {
+  margin-top: 30px;
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: medium none;
+  display: block;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  width: 100%;
+  transition: all 500ms ease;
+  border: 1px solid #e2e2e2;
+}
+.type-3033 .Ask .textarea {
+  margin-top: 30px;
+  background: #f7f7f7 none repeat scroll 0 0;
+  border: medium none;
+  display: block;
+  height: 50px;
+  margin-bottom: 30px;
+  padding: 0 20px;
+  width: 100%;
+  transition: all 500ms ease;
+  border: 1px solid #e2e2e2;
+  line-height: 50px;
+}
+.type-3033 .Ask .submit1 {
+  height: 40px;
+  width: 150px;
+  background-color: #3be6ef;
+  border-radius: 5px;
+  border: 1px solid black;
+  font-weight: 700;
+  color: white;
+}
+.type-3033 .Ask .hienchu {
+  margin-top: 20px;
+  border: 2px solid goldenrod;
+  text-align: center;
+  display: none;
+}
+.type-3033 .Ask .submit1:active ~.hienchu {
+  display: block;
+}
+.type-3033 .Ask .submit1:hover {
+  background-color: blue;
+  animation: 4s ease-in-out;
+}

@@ -1,0 +1,236 @@
+@margin: 10px;
+@margin-top: 20px;
+@margin-right: 20px;
+@margin-left: 100px;
+@margin-bottom: 10px;
+@height: 50px;
+@width: 100%;
+@border-color: black;
+@padding-left: 20px;
+@width-accrod-btn: 500px;
+@height-accrod-btn: 50px;
+@color-accrod-btn : rgb(249, 244, 244);
+@background-color: #3be6ef;
+@rotate-trucxoay: 90deg;
+@padding-muiten-left: 150px;
+@margin-muiten: 0;
+@min: 100px;
+@max: 200px;
+@width-accordion: 500px;
+@padding-checked: 10px;
+@top: -170px;
+@left: 160px;
+@color: #9a9a9a;
+@margin-left-content-box: 100px;
+@margin-top-content-box: 20px;
+@font-weight: 700;
+@background-Text-Ask: #f7f7f7 none repeat scroll 0 0;
+@border-Ask: medium none;
+@border-radius-submit: 5px;
+@height-submit: 40px;
+@width-submit: 150px;
+@background-color-submit: #3be6ef;
+@color-submit: white;
+@display-Ask: block;
+@height-text: 50px;
+@width-text: 100%;
+@padding-text: 0 20px;
+@margin-bottom-text: 30px;
+@margin-top-text: 30px;
+@background-color-Ask:rgba(195, 189, 189, 0.462);
+@top-Ask:-20px;
+
+.type-3033{
+
+    .Nav{
+        height: @height;
+        width: @width;
+        border: .2px solid @border-color;
+        display: flex;
+        align-items: center;
+    
+    
+        .homepage {
+            margin-left: @margin-left;
+            margin-right: @margin-right;
+        }
+    }
+    
+    .content-box{
+        margin-left: @margin-left-content-box;
+        margin-top: @margin-top-content-box;
+    
+        .accord-btn {
+            width: @width-accrod-btn;
+            height: @height-accrod-btn;
+        }
+    
+        .accordion {
+            width: @width-accordion;
+        }
+    
+        .khungdep {
+            display: flex;
+    
+        }
+    
+        .muiten {
+            padding-left: @padding-muiten-left;
+            margin-top: @margin-muiten;
+        }
+    
+        .accordion-block {
+            margin-bottom: @margin-bottom;
+    
+        }
+    
+        .accord-content {
+            max-height: @margin-muiten;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.5s ease;
+            padding: 0 @margin-bottom;
+        }
+    
+        input[type="checkbox"] {
+            display: none;
+        }
+    
+    
+        input[type="checkbox"]:checked~.accord-content {
+            max-height: @max;
+            padding: @padding-checked;
+        }
+    
+        input[type="checkbox"]:checked~.accord-btn {
+            background-color: @background-color;
+            color: @color-accrod-btn;
+        }
+    
+        input[type="checkbox"]:checked~.accord-btn .chu {
+            background-color: @background-color;
+            color: @color-accrod-btn;
+        }
+    
+        .chu {
+            color: #3d3d3d;
+            font-weight: @font-weight;
+            transition: all 500ms ease;
+            text-transform: none;
+        }
+    
+        .content-text {
+            color: @color;
+            line-height: 26px;
+            margin: @margin-muiten;
+        }
+    
+    
+        .accord-btn {
+            cursor: pointer;
+    
+            padding: @padding-checked;
+            border: 1px solid #ccc;
+            transition: background-color 0.3s ease;
+        }
+    
+        .trucxoay {
+            position: relative;
+        }
+    
+        .muiten {
+            text-align: center;
+            position: absolute;
+        }
+    
+        input[type="checkbox"]:checked+.accord-btn .trucxoay {
+            transform: rotate(@rotate-trucxoay);
+            top: @top;
+            left: @left;
+        }
+    
+    }
+    
+    .Ask{
+           background-color: @background-color-Ask;
+           top: @top-Ask;
+           margin-top: @padding-left;
+        .text {
+            margin-top: @margin-top-text;
+            background: @background-Text-Ask;
+            border: @border-Ask;
+            display: @display-Ask;
+            height: @height-text;
+            margin-bottom: @margin-bottom-text;
+            padding: @padding-text;
+            width: @width-text;
+            transition: all 500ms ease;
+            border: 1px solid #e2e2e2;
+        }
+    
+        .email {
+            margin-top: @margin-top-text;
+            background: @background-Text-Ask;
+            border: @border-Ask;
+            display: @display-Ask;
+            height: @height-text;
+            margin-bottom: @margin-bottom-text;
+            padding: @padding-text;
+            width: @width-text;
+            transition: all 500ms ease;
+            border: 1px solid #e2e2e2;
+        }
+    
+        .subject {
+            margin-top: @margin-top-text;
+            background: @background-Text-Ask;
+            border: @border-Ask;
+            display: @display-Ask;
+            height: @height-text;
+            margin-bottom: @margin-bottom-text;
+            padding: @padding-text;
+            width: @width-text;
+            transition: all 500ms ease;
+            border: 1px solid #e2e2e2;
+    
+        }
+    
+        .textarea {
+            margin-top: @margin-top-text;
+            background: @background-Text-Ask;
+            border: @border-Ask;
+            display: @display-Ask;
+            height: @height-text;
+            margin-bottom: @margin-bottom-text;
+            padding: @padding-text;
+            width: @width-text;
+            transition: all 500ms ease;
+            border: 1px solid #e2e2e2;
+            line-height: 50px;
+        }
+    
+        .submit1 { 
+            height: @height-submit;
+            width: @width-submit ;
+            background-color: @background-color-submit;
+            border-radius: @border-radius-submit;
+            border: 1px solid @border-color;
+            font-weight: @font-weight;
+            color: @color-submit;
+        }
+        .hienchu {
+            margin-top: 20px;
+            border: 2px solid goldenrod;
+            text-align: center;
+            display: none;
+        }
+        .submit1:active ~.hienchu{
+            display: block;
+        }
+    
+        .submit1:hover {
+             background-color: blue;
+             animation: 4s ease-in-out;
+        }
+    }
+
+}
